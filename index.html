@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 id="title">Cuentanos un poco sobre ti</h1>
+        <p id="description">Contesta este cuestionario para que nos platiques un poco de lo que sabes</p>
+    </header>
+    <main>
+        <form id="survey-form" action="/holis" method="post">
+            <fieldset>
+                <label id="name-label" for="name">Nombre: <input id="name" type="text" placeholder="Jose perez aguilar" required /></label>
+                <label id="email-label" for="email">Correo: <input id="email" type="email" placeholder="ejemplo@gmail.com" required /></label>
+                <label id="number-label" for="number">Numero: <input id="number" type="number" min="18" max="100" value="edad" placeholder="agrega tu edad" required /></label>
+            </fieldset>
+            <fieldset>
+                <label for="select.ti"> Selecciona la tecnologia que estas estudiando.
+                <select name="ti" id="dropdown">
+                    <option value=" " selected>Tecnologias</option>
+                    <option value="front-end">Front-End</option>
+                    <option value="back-end">Back-End</option>
+                    <option value="fullstack">FullStack</option>
+                    <option value="data-analysis">Data Analysis</option>
+                </select></label>
+            </fieldset>
+            <fieldset>
+                <h2>Selecciona uno.</h2>
+                <label for="perro"><input type="radio" name="animal" id="perro" value="perro" /> Perro</label>
+                <label for="gato"><input type="radio" name="animal" id="gato" value="gato" /> Gato</label>
+                <label for="bio">Agrega una biografia:
+                <textarea name="bio" id="bio" cols="20" rows="3"></textarea></label>
+                <label for="terminos-y-condiciones"><input type="checkbox" name="terminos-y-condiciones" id="term-cond" value="term-cond" required /> Debes leer y aceptar los <a class="term-y-cond" href="https://policies.google.com/terms?hl=es" target="_blank">Terminos y Condiciones</a> para continuar.</label>
+            </fieldset>
+            <input id="submit" type="submit" value="Enviar">
+        </form>
+    </main>
+</body>
+</html>
